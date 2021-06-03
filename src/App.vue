@@ -1,45 +1,40 @@
 <template>
   <div id="app">
-<!--        
-   <CartDZ2
-image-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGFf77XwVTKdTny5MsNc2mOHI5hApQ6eL9pQ&usqp=CAU"
-value="27,5"/> -->
-<CartDZ2 v-for="(item,index) in datalist" :key="index"
-:image-src="item.imageSrc"
-:value="item.value"
-/>
-  
+   <pupils :pupil-list="pupilList"/> 
   </div>
 </template>
 
 <script>
 
-import CartDZ2 from './components/CartDZ2/index'
 
+import pupils from './components/CartDZ2/pupils.vue'
 export default {
   name: 'App',
   components: {
-      CartDZ2
-        
+      pupils
   },
   data() {
     return{
-      datalist: [
+     pupilList: [
 {
-  id:1,
-  imageSrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGFf77XwVTKdTny5MsNc2mOHI5hApQ6eL9pQ&usqp=CAU",
-  value:"27,5"
+    id:1,
+    number: 1,
+    firstname: "Іванов І.І"
 },
 {
   id:2,
-  imageSrc:"https://img1.freepng.ru/20171220/joe/euro-icon-png-5a3a2409dbaae4.91687898151375975389984204.jpg",
-  value:"34" 
-}
-
-
+  firstname: "Жирков Я.Я.",
+  number: 2
+},
+{
+  id:3,
+  firstname: "Коновалов Р.Н.",
+  number: 3
+},
+ 
       ]
     }
-  }
+  },
 }
 </script>
 
