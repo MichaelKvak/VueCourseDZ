@@ -1,41 +1,34 @@
 <template>
   <div id="app">
-   <pupils :pupil-list="pupilList"/> 
+  <reclam-cart 
+  image-src='http://komiwiki.syktsu.ru/images/thumb/e/ec/%D0%9E%D1%80%D0%B5%D0%BB.jpg/280px-%D0%9E%D1%80%D0%B5%D0%BB.jpg'
+  images-logo='https://yt3.ggpht.com/ytc/AAUvwnjSe4fJZyLxyXr-kOYKJo6VGiSDgYsmvsIoiOnVHA=s88-c-k-c0x00ffffff-no-rj'
+  reclam-title="Їж морковку, будеш бачити як орел"
+  />
+
   </div>
 </template>
-
 <script>
 
-
-import pupils from './components/CartDZ2/pupils.vue'
+import reclamCart from './components/CartDZ2/reclamCart.vue'
 export default {
   name: 'App',
   components: {
-      pupils
+  reclamCart    
   },
   data() {
-    return{
-     pupilList: [
-{
-    id:1,
-    number: 1,
-    firstname: "Іванов І.І"
-},
-{
-  id:2,
-  firstname: "Жирков Я.Я.",
-  number: 2
-},
-{
-  id:3,
-  firstname: "Коновалов Р.Н.",
-  number: 3
-},
+    return {
+reclamCartList: [
+  {
+  id:1,
+  imageSrc: 'http://komiwiki.syktsu.ru/images/thumb/e/ec/%D0%9E%D1%80%D0%B5%D0%BB.jpg/280px-%D0%9E%D1%80%D0%B5%D0%BB.jpg',
  
-      ]
-    }
+  reclamTitle: "Їж морковку, будеш бачити як орел"
   },
-}
+ ]
+   }
+  },
+ }
 </script>
 
 <style>
