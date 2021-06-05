@@ -6,7 +6,7 @@
 </label>
 <label>
     english word
-    <input type="text" v-model='transl'>
+    <input type="text" v-model="transl"/>    Тут достатньо одностороньої прив"язки даних <input type="text" :value="transl"/>
       <button @click = "perevod">
                         translate
                     </button>
