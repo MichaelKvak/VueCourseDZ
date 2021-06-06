@@ -1,35 +1,52 @@
 <template>
   <div id="app">
- <buy-ticket v-for="(item,index) in moviList" :key="index"
-            :image-logo="item.imageLogo"
-            :image-main="item.imageMain"
-            :movi-name="item.moviName"
-         
- />
-  </div>
+
+ <TaskList :data-list="DataList"
+           @remove-task="removeTask"
+           @add-task="addTask"/>         
+
+ 
+ </div>
 </template>
 <script>
 
-import buyTicket from './components/CartDZ2/buyTicket.vue'
+import TaskList from './components/DZ3/TaskList.vue'
 export default {
   name: 'App',
+  methods: {
+   removeTask(id){
+     this.DataList = this.DataList.filter(t => t.id !== id)
+   },
+   addTask(task){
+     this.DataList.push(task)
+   }
+  },
   components: {
-   buyTicket
+  TaskList
   },
   data() {
     return {
-      moviList: [
-        {
-          id:1,
-          imageLogo: 'https://cdn1.vectorstock.com/i/thumb-large/06/85/mountain-films-logo-design-inspiration-vector-24750685.jpg',
-          imageMain: 'https://i.ytimg.com/vi/LR8x2sKK3Oc/mqdefault.jpg',
-          moviName: 'Scarry Movi'
-                  }
+      DataList: [
+        {id:1, 
+         title: 'Practice Javascript',
+         completed: false
+         },
+         {
+           id:2,
+           title: 'Learn Laravel',
+           completed: false
+         },
+         {
+           id:3,
+           title: 'Workout',
+           completed: false
+         }
       ]
-
   }
  }
-}
+ 
+ }
+
 </script>
 
 <style>
