@@ -1,17 +1,17 @@
 <template>
   <div>
     <!-- 3.Використовуємо компонент, як новий тег -->
-    <log-pass />
+    <fly-menu />
   </div>
 </template>
 <script>
 //1. Імпортуємо файл
-import LogPass from "./components/DZ4/LogPass.vue";
+import FlyMenu from "./components/DZ4/FlyMenu.vue";
 export default {
   name: "App",
   components: {
     //2.Реєстрація
-    LogPass,
+    FlyMenu,
   },
 };
 </script>
