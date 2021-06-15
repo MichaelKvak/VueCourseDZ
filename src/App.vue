@@ -1,20 +1,29 @@
 <template>
   <div>
     <!-- 3.Використовуємо компонент, як новий тег -->
-    <months />
+    <social-book />
   </div>
 </template>
 <script>
 //1. Імпортуємо файл
-import months from "./components/DZ4/months.vue";
+import socialBook from "./components/DZ5/socialBook.vue";
+
 export default {
   name: "App",
+
   components: {
     //2.Реєстрація
-    months,
+    socialBook,
   },
   data() {
-    return {};
+    return {
+      messages: [
+        {
+          id: 1,
+          title: "test",
+        },
+      ],
+    };
   },
 };
 </script>
